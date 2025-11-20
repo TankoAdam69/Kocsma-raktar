@@ -1,0 +1,258 @@
+[
+  {
+    "Id": 1,
+    "Name": "Borsodi Világos",
+    "Category": "Sör",
+    "Quantity": 36,
+    "InStock": true,
+    "LastRestock": "2025-01-12"
+  },
+  {
+    "Id": 2,
+    "Name": "Heineken",
+    "Category": "Sör",
+    "Quantity": 24,
+    "InStock": true,
+    "LastRestock": "2025-01-08"
+  },
+
+  {
+    "Id": 3,
+    "Name": "Egri Bikavér",
+    "Category": "Bor",
+    "Quantity": 6,
+    "InStock": true,
+    "LastRestock": "2025-01-05"
+  },
+  {
+    "Id": 4,
+    "Name": "Tokaji Furmint",
+    "Category": "Bor",
+    "Quantity": 4,
+    "InStock": true,
+    "LastRestock": "2025-01-02"
+  },
+
+  {
+    "Id": 5,
+    "Name": "Jim Beam",
+    "Category": "Rövid",
+    "Quantity": 3,
+    "InStock": true,
+    "LastRestock": "2025-01-10"
+  },
+  {
+    "Id": 6,
+    "Name": "Unicum",
+    "Category": "Rövid",
+    "Quantity": 2,
+    "InStock": true,
+    "LastRestock": "2025-01-09"
+  },
+
+  {
+    "Id": 7,
+    "Name": "Coca-Cola 0.5L",
+    "Category": "Üdítõ",
+    "Quantity": 40,
+    "InStock": true,
+    "LastRestock": "2025-01-11"
+  },
+  {
+    "Id": 8,
+    "Name": "Fanta Narancs 0.5L",
+    "Category": "Üdítõ",
+    "Quantity": 25,
+    "InStock": true,
+    "LastRestock": "2025-01-06"
+  },
+
+  {
+    "Id": 9,
+    "Name": "Sós mogyoró",
+    "Category": "Chips",
+    "Quantity": 12,
+    "InStock": true,
+    "LastRestock": "2025-01-03"
+  },
+
+  {
+    "Id": 10,
+    "Name": "Red Bull",
+    "Category": "Energiaital",
+    "Quantity": 18,
+    "InStock": true,
+    "LastRestock": "2025-01-08"
+  }
+
+
+  {
+    "Id": 11,
+    "Name": "Staropramen",
+    "Category": "Sör",
+    "Quantity": 30,
+    "InStock": true,
+    "LastRestock": "2025-01-15"
+  },
+  {
+    "Id": 12,
+    "Name": "Soproni IPA",
+    "Category": "Sör",
+    "Quantity": 20,
+    "InStock": true,
+    "LastRestock": "2025-01-14"
+  },
+
+  {
+    "Id": 13,
+    "Name": "Merlot",
+    "Category": "Bor",
+    "Quantity": 5,
+    "InStock": true,
+    "LastRestock": "2025-01-12"
+  },
+  {
+    "Id": 14,
+    "Name": "Cabernet Sauvignon",
+    "Category": "Bor",
+    "Quantity": 8,
+    "InStock": true,
+    "LastRestock": "2025-01-11"
+  },
+
+  {
+    "Id": 15,
+    "Name": "Vodka Finlandia",
+    "Category": "Rövid",
+    "Quantity": 4,
+    "InStock": true,
+    "LastRestock": "2025-01-10"
+  },
+  {
+    "Id": 16,
+    "Name": "Baileys",
+    "Category": "Rövid",
+    "Quantity": 3,
+    "InStock": true,
+    "LastRestock": "2025-01-09"
+  },
+
+  {
+    "Id": 17,
+    "Name": "Sprite 0.5L",
+    "Category": "Üdítõ",
+    "Quantity": 28,
+    "InStock": true,
+    "LastRestock": "2025-01-14"
+  },
+  {
+    "Id": 18,
+    "Name": "Nestea Barack",
+    "Category": "Üdítõ",
+    "Quantity": 18,
+    "InStock": true,
+    "LastRestock": "2025-01-13"
+  },
+
+  {
+    "Id": 19,
+    "Name": "Chio Paprikás Chips",
+    "Category": "Chips",
+    "Quantity": 10,
+    "InStock": true,
+    "LastRestock": "2025-01-10"
+  },
+  {
+    "Id": 20,
+    "Name": "Pringles Original",
+    "Category": "Chips",
+    "Quantity": 6,
+    "InStock": true,
+    "LastRestock": "2025-01-07"
+  },
+
+  {
+    "Id": 21,
+    "Name": "Nescafé 3in1",
+    "Category": "Kávé",
+    "Quantity": 25,
+    "InStock": true,
+    "LastRestock": "2025-01-15"
+  },
+  {
+    "Id": 22,
+    "Name": "Lavazza Crema e Gusto",
+    "Category": "Kávé",
+    "Quantity": 8,
+    "InStock": true,
+    "LastRestock": "2025-01-12"
+  },
+
+  {
+    "Id": 23,
+    "Name": "Hell Classic",
+    "Category": "Energiaital",
+    "Quantity": 30,
+    "InStock": true,
+    "LastRestock": "2025-01-13"
+  },
+  {
+    "Id": 24,
+    "Name": "Monster Mango Loco",
+    "Category": "Energiaital",
+    "Quantity": 12,
+    "InStock": true,
+    "LastRestock": "2025-01-11"
+  },
+
+  {
+    "Id": 25,
+    "Name": "Dreher Gold",
+    "Category": "Sör",
+    "Quantity": 22,
+    "InStock": true,
+    "LastRestock": "2025-01-16"
+  },
+  {
+    "Id": 26,
+    "Name": "Asahi Super Dry",
+    "Category": "Sör",
+    "Quantity": 14,
+    "InStock": true,
+    "LastRestock": "2025-01-14"
+  },
+
+  {
+    "Id": 27,
+    "Name": "Törley Doux",
+    "Category": "Bor",
+    "Quantity": 7,
+    "InStock": true,
+    "LastRestock": "2025-01-09"
+  },
+  {
+    "Id": 28,
+    "Name": "Jägermeister",
+    "Category": "Rövid",
+    "Quantity": 5,
+    "InStock": true,
+    "LastRestock": "2025-01-08"
+  },
+
+  {
+    "Id": 29,
+    "Name": "Pepsi Max 0.5L",
+    "Category": "Üdítõ",
+    "Quantity": 35,
+    "InStock": true,
+    "LastRestock": "2025-01-13"
+  },
+  {
+    "Id": 30,
+    "Name": "ORSCHIO Chips Sós",
+    "Category": "Chips",
+    "Quantity": 15,
+    "InStock": true,
+    "LastRestock": "2025-01-09"
+  }
+]
