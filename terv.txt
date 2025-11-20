@@ -1,0 +1,91 @@
+1. Alap CRUD (Kezdő)
+
+Cél: működő lista, hozzáadás, módosítás, törlés JSON-alapú mentéssel.
+
+JSON betöltés (stock.json) → ListBox vagy DataGrid
+
+Hozzáadás ablak (AddEditWindow) TextBox + ComboBox + CheckBox + DatePicker
+
+Módosítás: kiválasztott elem adatainak szerkesztése
+
+Törlés: kiválasztott elem eltávolítása
+
+Mentés JSON-ba minden művelet után
+
+Használt WPF elemek: ListBox, Button, TextBox, ComboBox, CheckBox, DatePicker
+
+2. Felhasználói élmény javítása (Kezdő → Középhaladó)
+
+ComboBox feltöltése categories.json alapján → mindig egységes kategória lista
+
+ListBox item template: Name, Category, Quantity, InStock
+
+Színkódolás: piros = elfogyott, zöld = van készleten
+
+DatePicker a feltöltés dátumának megjelenítésére
+
+Szűrés kategória szerint (ComboBox vagy RadioButton)
+
+Keresés név alapján (TextBox → ListBox filter)
+
+Használt WPF elemek: DataTemplate, Binding, Triggers
+
+3. Validáció és gyorsítás (Középhaladó)
+
+Beviteli validáció:
+
+Darabszám csak szám lehet
+
+Kötelező mezők ellenőrzése (pl. név és kategória)
+
+/ – gomb a készleten lévő mennyiség gyors módosításához
+
+Multi-select törlés (ListBox SelectionMode="Extended")
+
+Új / módosított tételek kiemelése (pl. rövid ideig háttérszínnel)
+
+Használt WPF elemek: ValidationRules, Triggers, DataBinding
+
+4. Haladó funkciók (Haladó)
+
+Rendezés ListBox-ban / DataGrid-ben (Név, Quantity, LastRestock)
+
+Készlet-riasztás: Quantity < 5 → vizuális figyelmeztetés
+
+Undo / Redo műveletek (stack segítségével)
+
+Automatikus mentés JSON-ba minden módosításnál
+
+Statisztika kategóriánként → grafikon (pl. LiveCharts, OxyPlot)
+
+Export CSV / PDF (haladó, későbbi bővítés)
+
+Naplózás: mikor mi változott (opcionális)
+
+Használt WPF elemek: DataGrid, CollectionViewSource, külső chart library
+
+5. Extra UI csinosítások
+
+Reszponzív Grid + StackPanel kombináció a könnyű méretezéshez
+
+Színek, ikonok, gombstílusok (pl. piros = törlés, zöld = hozzáadás)
+
+ToolTip-ek a gombokon és ListBox elemein
+
+Dinamikus betűméret, hogy nagyobb képernyőn is jól nézzen ki
+
+💡 Fejlesztési sorrend javaslat:
+
+Alap CRUD (JSON betöltés + mentés)
+
+ComboBox + szűrés + ListBox template
+
+Beviteli validáció + gyors gombok
+
+Multi-select, színkódolás, kiemelés
+
+Rendezés és készlet-riasztás
+
+Undo/Redo + statisztika + export
+
+UI csinosítás, grafikonok, naplózás
