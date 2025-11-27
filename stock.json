@@ -262,5 +262,13 @@
     "Quantity": 123,
     "InStock": true,
     "LastRestock": "2025-01-15"
+  },
+  {
+    "Id": 32,
+    "Name": "Jim Beam",
+    "Category": "R�vid",
+    "Quantity": 17,
+    "InStock": true,
+    "LastRestock": "2025-01-19"
   }
 ]
