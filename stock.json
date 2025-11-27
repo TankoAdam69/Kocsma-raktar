@@ -1,8 +1,8 @@
 [
   {
     "Id": 1,
-    "Name": "Borsodi Világos",
-    "Category": "Sör",
+    "Name": "Borsodi Vilï¿½gos",
+    "Category": "Sï¿½r",
     "Quantity": 36,
     "InStock": true,
     "LastRestock": "2025-01-12"
@@ -10,7 +10,7 @@
   {
     "Id": 2,
     "Name": "Heineken",
-    "Category": "Sör",
+    "Category": "Sï¿½r",
     "Quantity": 24,
     "InStock": true,
     "LastRestock": "2025-01-08"
@@ -18,7 +18,7 @@
 
   {
     "Id": 3,
-    "Name": "Egri Bikavér",
+    "Name": "Egri Bikavï¿½r",
     "Category": "Bor",
     "Quantity": 6,
     "InStock": true,
@@ -36,7 +36,7 @@
   {
     "Id": 5,
     "Name": "Jim Beam",
-    "Category": "Rövid",
+    "Category": "Rï¿½vid",
     "Quantity": 3,
     "InStock": true,
     "LastRestock": "2025-01-10"
@@ -44,7 +44,7 @@
   {
     "Id": 6,
     "Name": "Unicum",
-    "Category": "Rövid",
+    "Category": "Rï¿½vid",
     "Quantity": 2,
     "InStock": true,
     "LastRestock": "2025-01-09"
@@ -53,7 +53,7 @@
   {
     "Id": 7,
     "Name": "Coca-Cola 0.5L",
-    "Category": "Üdítõ",
+    "Category": "ï¿½dï¿½tï¿½",
     "Quantity": 40,
     "InStock": true,
     "LastRestock": "2025-01-11"
@@ -61,7 +61,7 @@
   {
     "Id": 8,
     "Name": "Fanta Narancs 0.5L",
-    "Category": "Üdítõ",
+    "Category": "ï¿½dï¿½tï¿½",
     "Quantity": 25,
     "InStock": true,
     "LastRestock": "2025-01-06"
@@ -69,7 +69,7 @@
 
   {
     "Id": 9,
-    "Name": "Sós mogyoró",
+    "Name": "Sï¿½s mogyorï¿½",
     "Category": "Chips",
     "Quantity": 12,
     "InStock": true,
@@ -89,7 +89,7 @@
   {
     "Id": 11,
     "Name": "Staropramen",
-    "Category": "Sör",
+    "Category": "Sï¿½r",
     "Quantity": 30,
     "InStock": true,
     "LastRestock": "2025-01-15"
@@ -97,7 +97,7 @@
   {
     "Id": 12,
     "Name": "Soproni IPA",
-    "Category": "Sör",
+    "Category": "Sï¿½r",
     "Quantity": 20,
     "InStock": true,
     "LastRestock": "2025-01-14"
@@ -123,7 +123,7 @@
   {
     "Id": 15,
     "Name": "Vodka Finlandia",
-    "Category": "Rövid",
+    "Category": "Rï¿½vid",
     "Quantity": 4,
     "InStock": true,
     "LastRestock": "2025-01-10"
@@ -131,7 +131,7 @@
   {
     "Id": 16,
     "Name": "Baileys",
-    "Category": "Rövid",
+    "Category": "Rï¿½vid",
     "Quantity": 3,
     "InStock": true,
     "LastRestock": "2025-01-09"
@@ -140,7 +140,7 @@
   {
     "Id": 17,
     "Name": "Sprite 0.5L",
-    "Category": "Üdítõ",
+    "Category": "ï¿½dï¿½tï¿½",
     "Quantity": 28,
     "InStock": true,
     "LastRestock": "2025-01-14"
@@ -148,7 +148,7 @@
   {
     "Id": 18,
     "Name": "Nestea Barack",
-    "Category": "Üdítõ",
+    "Category": "ï¿½dï¿½tï¿½",
     "Quantity": 18,
     "InStock": true,
     "LastRestock": "2025-01-13"
@@ -156,7 +156,7 @@
 
   {
     "Id": 19,
-    "Name": "Chio Paprikás Chips",
+    "Name": "Chio Paprikï¿½s Chips",
     "Category": "Chips",
     "Quantity": 10,
     "InStock": true,
@@ -173,8 +173,8 @@
 
   {
     "Id": 21,
-    "Name": "Nescafé 3in1",
-    "Category": "Kávé",
+    "Name": "Nescafï¿½ 3in1",
+    "Category": "Kï¿½vï¿½",
     "Quantity": 25,
     "InStock": true,
     "LastRestock": "2025-01-15"
@@ -182,7 +182,7 @@
   {
     "Id": 22,
     "Name": "Lavazza Crema e Gusto",
-    "Category": "Kávé",
+    "Category": "Kï¿½vï¿½",
     "Quantity": 8,
     "InStock": true,
     "LastRestock": "2025-01-12"
@@ -208,7 +208,7 @@
   {
     "Id": 25,
     "Name": "Dreher Gold",
-    "Category": "Sör",
+    "Category": "Sï¿½r",
     "Quantity": 22,
     "InStock": true,
     "LastRestock": "2025-01-16"
@@ -216,7 +216,7 @@
   {
     "Id": 26,
     "Name": "Asahi Super Dry",
-    "Category": "Sör",
+    "Category": "Sï¿½r",
     "Quantity": 14,
     "InStock": true,
     "LastRestock": "2025-01-14"
@@ -224,7 +224,7 @@
 
   {
     "Id": 27,
-    "Name": "Törley Doux",
+    "Name": "Tï¿½rley Doux",
     "Category": "Bor",
     "Quantity": 7,
     "InStock": true,
@@ -232,8 +232,8 @@
   },
   {
     "Id": 28,
-    "Name": "Jägermeister",
-    "Category": "Rövid",
+    "Name": "Jï¿½germeister",
+    "Category": "Rï¿½vid",
     "Quantity": 5,
     "InStock": true,
     "LastRestock": "2025-01-08"
@@ -242,17 +242,25 @@
   {
     "Id": 29,
     "Name": "Pepsi Max 0.5L",
-    "Category": "Üdítõ",
+    "Category": "ï¿½dï¿½tï¿½",
     "Quantity": 35,
     "InStock": true,
     "LastRestock": "2025-01-13"
   },
   {
     "Id": 30,
-    "Name": "ORSCHIO Chips Sós",
+    "Name": "ORSCHIO Chips Sï¿½s",
     "Category": "Chips",
     "Quantity": 15,
     "InStock": true,
     "LastRestock": "2025-01-09"
+  },
+  {
+    "Id": 31,
+    "Name": "Jack Daniels",
+    "Category": "Rï¿½vid",
+    "Quantity": 123,
+    "InStock": true,
+    "LastRestock": "2025-01-15"
   }
 ]
