@@ -1,0 +1,212 @@
+[
+  {
+    "Nev": "Heineken",
+    "Kategoria": "S\u00F6r",
+    "Mennyiseg": 0,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-11-27T00:00:00+01:00"
+  },
+  {
+    "Nev": "Dreher Bak",
+    "Kategoria": "S\u00F6r",
+    "Mennyiseg": 0,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-11-25T00:00:00+01:00"
+  },
+  {
+    "Nev": "Stella Artois",
+    "Kategoria": "S\u00F6r",
+    "Mennyiseg": 0,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-10T00:00:00+01:00"
+  },
+  {
+    "Nev": "Soproni 0.0%",
+    "Kategoria": "S\u00F6r",
+    "Mennyiseg": 78,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-26T00:00:00+01:00"
+  },
+  {
+    "Nev": "Tokaji Asz\u00FA 5 puttonyos",
+    "Kategoria": "Bor",
+    "Mennyiseg": 12,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-01T00:00:00+01:00"
+  },
+  {
+    "Nev": "Egri Bikav\u00E9r (Pr\u00E9mium)",
+    "Kategoria": "Bor",
+    "Mennyiseg": 35,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-18T00:00:00+01:00"
+  },
+  {
+    "Nev": "Olaszrizling",
+    "Kategoria": "Bor",
+    "Mennyiseg": 50,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-22T00:00:00+01:00"
+  },
+  {
+    "Nev": "Ros\u00E9 Cuv\u00E9e",
+    "Kategoria": "Bor",
+    "Mennyiseg": 10,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-11-05T00:00:00+01:00"
+  },
+  {
+    "Nev": "Coca-Cola 1L",
+    "Kategoria": "\u00DCd\u00EDt\u0151",
+    "Mennyiseg": 200,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-27T00:00:00+01:00"
+  },
+  {
+    "Nev": "Fanta Narancs 0.5L",
+    "Kategoria": "\u00DCd\u00EDt\u0151",
+    "Mennyiseg": 110,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-24T00:00:00+01:00"
+  },
+  {
+    "Nev": "Szentkir\u00E1lyi \u00C1sv\u00E1nyv\u00EDz (Sz\u00E9nsavas)",
+    "Kategoria": "\u00DCd\u00EDt\u0151",
+    "Mennyiseg": 350,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-27T00:00:00+01:00"
+  },
+  {
+    "Nev": "Cappy Alma 100%",
+    "Kategoria": "\u00DCd\u00EDt\u0151",
+    "Mennyiseg": 0,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-11-08T00:00:00+01:00"
+  },
+  {
+    "Nev": "Toma Paradicsoml\u00E9",
+    "Kategoria": "\u00DCd\u00EDt\u0151",
+    "Mennyiseg": 55,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-23T00:00:00+01:00"
+  },
+  {
+    "Nev": "Vodka Smirnoff Red",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 30,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-15T00:00:00+01:00"
+  },
+  {
+    "Nev": "Bacardi Carta Blanca",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 0,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-11-02T00:00:00+01:00"
+  },
+  {
+    "Nev": "Unicum",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 40,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-21T00:00:00+01:00"
+  },
+  {
+    "Nev": "Jameson \u00CDr Whiskey",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 0,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-11-11T00:00:00+01:00"
+  },
+  {
+    "Nev": "Becherovka",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 20,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-26T00:00:00+01:00"
+  },
+  {
+    "Nev": "Jim Beam Bourbon",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 22,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-19T00:00:00+01:00"
+  },
+  {
+    "Nev": "Campari Bitter",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 18,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-14T00:00:00+01:00"
+  },
+  {
+    "Nev": "Chivas Regal 12 \u00E9ves",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 0,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-11-07T00:00:00+01:00"
+  },
+  {
+    "Nev": "Eper Sz\u00F6rp (H\u00E1zi)",
+    "Kategoria": "Egy\u00E9b",
+    "Mennyiseg": 90,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-25T00:00:00+01:00"
+  },
+  {
+    "Nev": "K\u00E1v\u00E9 (Instant)",
+    "Kategoria": "Egy\u00E9b",
+    "Mennyiseg": 130,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-27T00:00:00+01:00"
+  },
+  {
+    "Nev": "Tej 2.8% (UHT)",
+    "Kategoria": "Egy\u00E9b",
+    "Mennyiseg": 220,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-26T00:00:00+01:00"
+  },
+  {
+    "Nev": "Citroml\u00E9 (Koncentr\u00E1tum)",
+    "Kategoria": "Egy\u00E9b",
+    "Mennyiseg": 70,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-22T00:00:00+01:00"
+  },
+  {
+    "Nev": "Tonic Water",
+    "Kategoria": "\u00DCd\u00EDt\u0151",
+    "Mennyiseg": 95,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-20T00:00:00+01:00"
+  },
+  {
+    "Nev": "S\u00F6r K\u00E9zm\u0171ves IPA",
+    "Kategoria": "S\u00F6r",
+    "Mennyiseg": 18,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-13T00:00:00+01:00"
+  },
+  {
+    "Nev": "Cabernet Sauvignon",
+    "Kategoria": "Bor",
+    "Mennyiseg": 42,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-24T00:00:00+01:00"
+  },
+  {
+    "Nev": "J\u00E4germeister",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 20,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-27T00:00:00+01:00"
+  },
+  {
+    "Nev": "Earl Grey Tea (Filter)",
+    "Kategoria": "Egy\u00E9b",
+    "Mennyiseg": 65,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-16T00:00:00+01:00"
+  }
+]

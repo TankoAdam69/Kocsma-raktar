@@ -1,13 +1,199 @@
-﻿<Window x:Class="Kocsma_raktár.MainWindow"
+﻿<Window x:Class="KocsmaLeltar.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Kocsma_raktár"
+        xmlns:local="clr-namespace:KocsmaLeltar"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <ComboBox HorizontalAlignment="Left" Height="236" Margin="199,58,0,0" VerticalAlignment="Top" Width="350"/>
+        Title="Kocsma Leltár (MVVM)" Height="460" Width="800"
+        Background="#FFEFEFEF"
+        
+        d:DataContext="{d:DesignInstance Type=local:MainViewModel, IsDesignTimeCreatable=True}">
 
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="MinWidth" Value="90"/>
+            <Setter Property="Background" Value="#FF007ACC"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF005A9E"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="Gray"/>
+                    <Setter Property="Opacity" Value="0.7"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="DangerButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Background" Value="#FFD9534F"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFC9302C"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="DatePicker">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="5,0"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" BorderBrush="#FFCCCCCC" Background="White" BorderThickness="1" CornerRadius="3" Padding="5">
+            <DockPanel>
+                <Label DockPanel.Dock="Top" Content="Italok" FontWeight="Bold" FontSize="16" Margin="5,0,0,5"/>
+                <ListBox ItemsSource="{Binding Leltar}" 
+                         SelectedItem="{Binding KivalasztottItal, Mode=TwoWay}"
+                         BorderThickness="0">
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border Padding="5" Margin="2" CornerRadius="3" BorderBrush="#FFEEEEEE" BorderThickness="1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackPanel Grid.Column="0" VerticalAlignment="Center">
+
+                                        <TextBlock Text="{Binding Nev}" FontWeight="Bold" FontSize="14">
+                                            <TextBlock.Style>
+                                                <Style TargetType="TextBlock">
+                                                    <Setter Property="Foreground" Value="Black"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding KeszletenVan}" Value="False">
+                                                            <Setter Property="Foreground" Value="Red"/>
+                                                            <Setter Property="TextDecorations" Value="Strikethrough"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+
+                                        <TextBlock Text="{Binding Kategoria}" FontStyle="Italic">
+                                            <TextBlock.Style>
+                                                <Style TargetType="TextBlock">
+                                                    <Setter Property="Foreground" Value="Gray"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding KeszletenVan}" Value="False">
+                                                            <Setter Property="Foreground" Value="LightGray"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </StackPanel>
+
+                                    <TextBlock Grid.Column="1" 
+                                               Text="{Binding Mennyiseg, StringFormat='{}{0} db'}" 
+                                               FontWeight="Bold" 
+                                               FontSize="14"
+                                               VerticalAlignment="Center" 
+                                               HorizontalAlignment="Right"
+                                               Margin="10,0,0,0">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="Foreground" Value="Black"/>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding KeszletenVan}" Value="False">
+                                                        <Setter Property="Foreground" Value="Red"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+
+                </ListBox>
+            </DockPanel>
+        </Border>
+
+        <Border Grid.Column="1" Margin="10,0,0,0" BorderBrush="#FFCCCCCC" Background="White" BorderThickness="1" CornerRadius="3" Padding="10">
+            <DockPanel>
+
+                <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                    <Button Content="Új felvitel" 
+                            Command="{Binding DataContext.UjItalCommand, RelativeSource={RelativeSource AncestorType=Window}}"/>
+                    <Button Content="Mentés" 
+                            Command="{Binding DataContext.MentesCommand, RelativeSource={RelativeSource AncestorType=Window}}"/>
+                    <Button Content="Törlés" 
+                            Command="{Binding DataContext.TorlesCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                            Style="{StaticResource DangerButton}"/>
+                </StackPanel>
+
+                <Grid DataContext="{Binding KivalasztottItal}">
+
+                    <Grid.Style>
+                        <Style TargetType="Grid">
+                            <Setter Property="IsEnabled" Value="True"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding}" Value="{x:Null}">
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Grid.Style>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Content="Név:"/>
+                    <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Nev, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    <Label Grid.Row="1" Grid.Column="0" Content="Kategória:"/>
+                    <ComboBox Grid.Row="1" Grid.Column="1"
+                              ItemsSource="{Binding DataContext.Kategoriak, RelativeSource={RelativeSource AncestorType=Window}}"
+                              SelectedValue="{Binding Kategoria}"/>
+
+                    <Label Grid.Row="2" Grid.Column="0" Content="Mennyiség (db):"/>
+                    <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Mennyiseg, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    <Label Grid.Row="3" Grid.Column="0" Content="Utolsó rendelés:"/>
+                    <DatePicker Grid.Row="3" Grid.Column="1" SelectedDate="{Binding UtolsoRendelesDatum}"/>
+
+                    
+                    <CheckBox Grid.Row="4" Grid.Column="1" Margin="5" Content="Készleten van"
+                              IsChecked="{Binding KeszletenVan}"/>
+
+                </Grid>
+            </DockPanel>
+        </Border>
     </Grid>
 </Window>
