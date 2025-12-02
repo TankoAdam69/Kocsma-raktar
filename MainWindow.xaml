@@ -5,158 +5,237 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KocsmaLeltar"
         mc:Ignorable="d"
-        Title="Kocsma Leltár (MVVM)" Height="460" Width="800"
-        Background="#FFEFEFEF"
+        Title="Kocsma Leltár Rendszer" Height="500" Width="850"
+        MinWidth="800" MinHeight="450"
+        WindowStartupLocation="CenterScreen"
+        
+        Background="#FF2D2D30" 
         
         d:DataContext="{d:DesignInstance Type=local:MainViewModel, IsDesignTimeCreatable=True}">
 
     <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Margin" Value="5"/>
-            <Setter Property="Padding" Value="10,5"/>
+
+        <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#FF2D2D30"/>
+        <SolidColorBrush x:Key="PanelBackgroundBrush" Color="#FF3F3F46"/>
+        <SolidColorBrush x:Key="PanelBorderBrush" Color="#FF555555"/>
+
+        <SolidColorBrush x:Key="PrimaryBrush" Color="#FF007ACC"/>
+        <SolidColorBrush x:Key="DangerBrush" Color="#FFD9534F"/>
+
+        <SolidColorBrush x:Key="PrimaryTextBrush" Color="#FFEFEFEF"/>
+        <SolidColorBrush x:Key="SecondaryTextBrush" Color="#FF9E9E9E"/>
+
+        <SolidColorBrush x:Key="SelectionBrush" Color="#FF4F4F56"/>
+        <SolidColorBrush x:Key="HoverBrush" Color="#FF3A3A40"/>
+
+        <Style x:Key="PanelBorderStyle" TargetType="Border">
+            <Setter Property="Background" Value="{StaticResource PanelBackgroundBrush}"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="BorderBrush" Value="{StaticResource PanelBorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="15"/>
+        </Style>
+
+        <Style x:Key="BaseButton" TargetType="Button">
+            <Setter Property="Margin" Value="5,0"/>
+            <Setter Property="Padding" Value="12,6"/>
             <Setter Property="MinWidth" Value="90"/>
-            <Setter Property="Background" Value="#FF007ACC"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="4"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
             <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#FF005A9E"/>
-                </Trigger>
                 <Trigger Property="IsEnabled" Value="False">
                     <Setter Property="Background" Value="Gray"/>
                     <Setter Property="Opacity" Value="0.7"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
-        <Style x:Key="DangerButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-            <Setter Property="Background" Value="#FFD9534F"/>
+
+        <Style x:Key="PrimaryButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
+            <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF005A9E"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="DangerButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
+            <Setter Property="Background" Value="{StaticResource DangerBrush}"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" Value="#FFC9302C"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
-        <Style TargetType="TextBox">
-            <Setter Property="Margin" Value="5"/>
-            <Setter Property="Padding" Value="3"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-        </Style>
-        <Style TargetType="ComboBox">
-            <Setter Property="Margin" Value="5"/>
-            <Setter Property="Padding" Value="3"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-        </Style>
-        <Style TargetType="DatePicker">
-            <Setter Property="Margin" Value="5"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-        </Style>
-        <Style TargetType="Label">
+
+        <Style x:Key="EditorLabel" TargetType="Label">
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Margin" Value="5,0"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="{StaticResource SecondaryTextBrush}"/>
         </Style>
+
+        <Style x:Key="EditorInputBase" TargetType="Control">
+            <Setter Property="Margin" Value="5,8"/>
+            <Setter Property="Padding" Value="8,5"/>
+            <Setter Property="BorderBrush" Value="{StaticResource PanelBorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="{StaticResource PrimaryTextBrush}"/>
+            <Setter Property="Background" Value="{StaticResource WindowBackgroundBrush}"/>
+        </Style>
+
+        <Style TargetType="TextBox" BasedOn="{StaticResource EditorInputBase}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border x:Name="border" CornerRadius="4" 
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ScrollViewer x:Name="PART_ContentHost" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="ComboBox" BasedOn="{StaticResource EditorInputBase}"/>
+        <Style TargetType="DatePicker" BasedOn="{StaticResource EditorInputBase}">
+            <Setter Property="Foreground" Value="{StaticResource PrimaryTextBrush}"/>
+        </Style>
+
+
+        <DataTemplate x:Key="LeltarItemTemplate">
+            <Border Padding="10" Margin="0,2" CornerRadius="4">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding Nev}" FontWeight="Bold" FontSize="14" Foreground="{StaticResource PrimaryTextBrush}"/>
+                        <TextBlock Text="{Binding Kategoria}" FontStyle="Italic" Foreground="{StaticResource SecondaryTextBrush}"/>
+                    </StackPanel>
+
+                    <TextBlock Grid.Column="1" 
+                               Text="{Binding Mennyiseg, StringFormat=' {} {0} db'}" 
+                               FontWeight="Bold" FontSize="14"
+                               VerticalAlignment="Center" HorizontalAlignment="Right"
+                               Margin="10,0,0,0" Foreground="{StaticResource PrimaryTextBrush}"/>
+                </Grid>
+            </Border>
+        </DataTemplate>
+
+        <Style x:Key="LeltarItemStyle" TargetType="ListBoxItem">
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="ContentTemplate" Value="{StaticResource LeltarItemTemplate}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border x:Name="Bd" 
+                                Padding="{TemplateBinding Padding}" 
+                                Margin="{TemplateBinding Margin}" 
+                                Background="Transparent" 
+                                BorderBrush="Transparent"
+                                BorderThickness="2,0,0,0"
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="{StaticResource HoverBrush}"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="{StaticResource SelectionBrush}"/>
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
+                            </Trigger>
+
+                            <DataTrigger Binding="{Binding Mennyiseg}" Value="0">
+                                <Setter TargetName="Bd" Property="Opacity" Value="0.7"/>
+                                <Setter Property="Foreground" Value="{StaticResource DangerBrush}"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </Window.Resources>
 
-    <Grid Margin="10">
+
+    <Grid Margin="15">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Column="0" BorderBrush="#FFCCCCCC" Background="White" BorderThickness="1" CornerRadius="3" Padding="5">
+        <Border Grid.Column="0" 
+                Style="{StaticResource PanelBorderStyle}">
             <DockPanel>
-                <Label DockPanel.Dock="Top" Content="Italok" FontWeight="Bold" FontSize="16" Margin="5,0,0,5"/>
+                <Label DockPanel.Dock="Top" Content="Készlet" 
+                       FontWeight="Bold" FontSize="18" 
+                       Foreground="{StaticResource PrimaryTextBrush}" 
+                       Margin="5,0,0,10"/>
+
                 <ListBox ItemsSource="{Binding Leltar}" 
                          SelectedItem="{Binding KivalasztottItal, Mode=TwoWay}"
-                         BorderThickness="0">
-
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <Border Padding="5" Margin="2" CornerRadius="3" BorderBrush="#FFEEEEEE" BorderThickness="1">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
-
-                                    <StackPanel Grid.Column="0" VerticalAlignment="Center">
-
-                                        <TextBlock Text="{Binding Nev}" FontWeight="Bold" FontSize="14">
-                                            <TextBlock.Style>
-                                                <Style TargetType="TextBlock">
-                                                    <Setter Property="Foreground" Value="Black"/>
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding KeszletenVan}" Value="False">
-                                                            <Setter Property="Foreground" Value="Red"/>
-                                                            <Setter Property="TextDecorations" Value="Strikethrough"/>
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </TextBlock.Style>
-                                        </TextBlock>
-
-                                        <TextBlock Text="{Binding Kategoria}" FontStyle="Italic">
-                                            <TextBlock.Style>
-                                                <Style TargetType="TextBlock">
-                                                    <Setter Property="Foreground" Value="Gray"/>
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding KeszletenVan}" Value="False">
-                                                            <Setter Property="Foreground" Value="LightGray"/>
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </TextBlock.Style>
-                                        </TextBlock>
-                                    </StackPanel>
-
-                                    <TextBlock Grid.Column="1" 
-                                               Text="{Binding Mennyiseg, StringFormat='{}{0} db'}" 
-                                               FontWeight="Bold" 
-                                               FontSize="14"
-                                               VerticalAlignment="Center" 
-                                               HorizontalAlignment="Right"
-                                               Margin="10,0,0,0">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Setter Property="Foreground" Value="Black"/>
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding KeszletenVan}" Value="False">
-                                                        <Setter Property="Foreground" Value="Red"/>
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                </Grid>
-                            </Border>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-
-                </ListBox>
+                         BorderThickness="0"
+                         Background="Transparent"
+                         HorizontalContentAlignment="Stretch"
+                         ItemContainerStyle="{StaticResource LeltarItemStyle}"
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
             </DockPanel>
         </Border>
 
-        <Border Grid.Column="1" Margin="10,0,0,0" BorderBrush="#FFCCCCCC" Background="White" BorderThickness="1" CornerRadius="3" Padding="10">
+        <Border Grid.Column="1" 
+                Margin="15,0,0,0"
+                Style="{StaticResource PanelBorderStyle}">
+
             <DockPanel>
 
                 <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
                     <Button Content="Új felvitel" 
-                            Command="{Binding DataContext.UjItalCommand, RelativeSource={RelativeSource AncestorType=Window}}"/>
+                            Command="{Binding DataContext.UjItalCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                            Style="{StaticResource PrimaryButton}"/>
                     <Button Content="Mentés" 
-                            Command="{Binding DataContext.MentesCommand, RelativeSource={RelativeSource AncestorType=Window}}"/>
+                            Command="{Binding DataContext.MentesCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                            Style="{StaticResource PrimaryButton}"/>
                     <Button Content="Törlés" 
                             Command="{Binding DataContext.TorlesCommand, RelativeSource={RelativeSource AncestorType=Window}}"
                             Style="{StaticResource DangerButton}"/>
                 </StackPanel>
 
                 <Grid DataContext="{Binding KivalasztottItal}">
-
                     <Grid.Style>
                         <Style TargetType="Grid">
                             <Setter Property="IsEnabled" Value="True"/>
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding}" Value="{x:Null}">
                                     <Setter Property="IsEnabled" Value="False"/>
+                                    <Setter Property="Opacity" Value="0.5"/>
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
@@ -167,30 +246,25 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Label Grid.Row="0" Grid.Column="0" Content="Név:"/>
+                    <Label Grid.Row="0" Grid.Column="0" Content="Név:" Style="{StaticResource EditorLabel}"/>
                     <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Nev, UpdateSourceTrigger=PropertyChanged}"/>
 
-                    <Label Grid.Row="1" Grid.Column="0" Content="Kategória:"/>
+                    <Label Grid.Row="1" Grid.Column="0" Content="Kategória:" Style="{StaticResource EditorLabel}"/>
                     <ComboBox Grid.Row="1" Grid.Column="1"
                               ItemsSource="{Binding DataContext.Kategoriak, RelativeSource={RelativeSource AncestorType=Window}}"
                               SelectedValue="{Binding Kategoria}"/>
 
-                    <Label Grid.Row="2" Grid.Column="0" Content="Mennyiség (db):"/>
+                    <Label Grid.Row="2" Grid.Column="0" Content="Mennyiség (db):" Style="{StaticResource EditorLabel}"/>
                     <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Mennyiseg, UpdateSourceTrigger=PropertyChanged}"/>
 
-                    <Label Grid.Row="3" Grid.Column="0" Content="Utolsó rendelés:"/>
+                    <Label Grid.Row="3" Grid.Column="0" Content="Utolsó rendelés:" Style="{StaticResource EditorLabel}"/>
                     <DatePicker Grid.Row="3" Grid.Column="1" SelectedDate="{Binding UtolsoRendelesDatum}"/>
-
-                    
-                    <CheckBox Grid.Row="4" Grid.Column="1" Margin="5" Content="Készleten van"
-                              IsChecked="{Binding KeszletenVan}"/>
 
                 </Grid>
             </DockPanel>

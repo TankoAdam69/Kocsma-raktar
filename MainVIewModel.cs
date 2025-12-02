@@ -55,57 +55,42 @@ namespace KocsmaLeltar
         {
             if (KivalasztottItal == null) return;
 
-            // Alap validáció
             if (string.IsNullOrWhiteSpace(KivalasztottItal.Nev) || KivalasztottItal.Nev == "Új ital")
             {
                 MessageBox.Show("A név megadása kötelező!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            // Ha a "Készleten van" pipa ki van véve, a mennyiség 0 lesz.
-            // Mentés pillanatában érvényesítjük.
-            if (KivalasztottItal.KeszletenVan == false)
-            {
-                KivalasztottItal.Mennyiseg = 0;
-            }
             // 1. ESET: A felhasználó egy ÚJ TÉTELT hoz létre
             if (!Leltar.Contains(KivalasztottItal))
             {
-                // Ellenőrizzük, hogy létezik-e már (azonos név + kategória)
+                // Ellenőrizzük, hogy logikailag létezik-e már (azonos név + kategória)
                 var letezoItal = Leltar.FirstOrDefault(ital =>
                     ital.Nev.Equals(KivalasztottItal.Nev, StringComparison.OrdinalIgnoreCase) &&
                     ital.Kategoria.Equals(KivalasztottItal.Kategoria, StringComparison.OrdinalIgnoreCase));
 
-                //IGEN, LÉTEZIK ILYEN -> Készlet hozzáadása és dátum frissítése
+                // 1A. ESET: IGEN, LÉTEZIK ILYEN -> Készlet hozzáadása és dátum frissítése
                 if (letezoItal != null)
                 {
                     DateTime ujDatum = KivalasztottItal.UtolsoRendelesDatum;
                     DateTime regiDatum = letezoItal.UtolsoRendelesDatum;
 
+                    // Dátum validálása
                     if (ujDatum.Date < regiDatum.Date)
                     {
                         MessageBox.Show($"Hiba: Az új rendelés dátuma ({ujDatum:yyyy.MM.dd}) nem lehet korábbi, mint az utolsó ismert rendelés dátuma ({regiDatum:yyyy.MM.dd}).", "Dátumhiba", MessageBoxButton.OK, MessageBoxImage.Warning);
                         return;
                     }
-                    letezoItal.KeszletenVan = KivalasztottItal.KeszletenVan;
-                    letezoItal.UtolsoRendelesDatum = ujDatum;
 
-                    // Mennyiség frissítése
-                    if (letezoItal.KeszletenVan == false)
-                    {
-                        letezoItal.Mennyiseg = 0;
-                    }
-                    else
-                    {
-                        // pipa bent van (és nem 0)
-                        letezoItal.Mennyiseg += KivalasztottItal.Mennyiseg;
-                    }
+                    // Adatok frissítése: Mennyiség hozzáadása és dátum frissítése
+                    letezoItal.Mennyiseg += KivalasztottItal.Mennyiseg;
+                    letezoItal.UtolsoRendelesDatum = ujDatum;
 
                     AdatokMentese();
                     MessageBox.Show($"A meglévő '{letezoItal.Nev}' tétel készlete frissítve!", "Siker");
                     KivalasztottItal = letezoItal;
                 }
-                //NEM LÉTEZIK ILYEN -> Új tétel felvétele
+                // 1B. ESET: NEM LÉTEZIK ILYEN -> Új tétel felvétele
                 else
                 {
                     Leltar.Add(KivalasztottItal);
@@ -113,7 +98,7 @@ namespace KocsmaLeltar
                     MessageBox.Show("Új ital elmentve!", "Siker", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
-            // 2. ESET: MEGLÉVŐ TÉTELT módosít
+            // 2. ESET: A felhasználó egy MEGLÉVŐ TÉTELT módosít
             else
             {
                 AdatokMentese();
@@ -131,7 +116,7 @@ namespace KocsmaLeltar
             if (valasz == MessageBoxResult.Yes)
             {
                 Leltar.Remove(KivalasztottItal);
-                KivalasztottItal = null;
+                KivalasztottItal = null!;
                 AdatokMentese();
             }
         }
@@ -145,6 +130,8 @@ namespace KocsmaLeltar
         {
             return KivalasztottItal != null && Leltar.Contains(KivalasztottItal);
         }
+
+        // --- Az adatkezelő metódusok (Betöltés/Mentés) változatlanok ---
 
         private void KategoriakBetoltese()
         {
@@ -189,7 +176,7 @@ namespace KocsmaLeltar
                 {
                     string json = File.ReadAllText(LELTAR_FAJL);
                     var adatok = JsonSerializer.Deserialize<List<Ital>>(json);
-                    Leltar = new ObservableCollection<Ital>(adatok);
+                    Leltar = new ObservableCollection<Ital>(adatok!);
                 }
                 else
                 {
