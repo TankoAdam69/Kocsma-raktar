@@ -258,7 +258,239 @@
     "Mennyiseg": 88,
     "KeszletenVan": false,
     "UtolsoRendelesDatum": "2025-09-22T00:00:00+02:00"
+  },
+
+  {
+    "Nev": "Jim Beam M\u00E9zes",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 179,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-24T00:00:00+01:00"
+  },
+  {
+    "Nev": "Jack Daniel's 20 years ",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 95,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-18T00:00:00+01:00"
+  },
+  {
+    "Nev": "Finlandia Vodka Pink",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 120,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-10T00:00:00+01:00"
+  },
+  {
+    "Nev": "Baileys Original",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 42,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-10-29T00:00:00+01:00"
+  },
+  {
+    "Nev": "Unicum",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 63,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-05T00:00:00+01:00"
+  },
+  {
+    "Nev": "Johnnie Walker Red Label",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 88,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-09-22T00:00:00+02:00"
+  },
+  {
+    "Nev": "Johnnie Walker Black Label",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 120,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-09-22T00:00:00+02:00"
+  },
+  {
+    "Nev": "Grey Goose",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 54,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-12T00:00:00+01:00"
+  },
+  {
+    "Nev": "Captain Morgan Spiced",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 73,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-10-30T00:00:00+01:00"
+  },
+  {
+    "Nev": "Malibu",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 39,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-08-17T00:00:00+02:00"
+  },
+  {
+    "Nev": "Jägermeister",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 112,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-01T00:00:00+01:00"
+  },
+  {
+    "Nev": "Absolut Vodka",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 149,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-22T00:00:00+01:00"
+  },
+  {
+    "Nev": "Absolut Vodka Raspberry",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 100,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-10-03T00:00:00+02:00"
+  },
+  {
+    "Nev": "Martini Bianco",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 27,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-10-03T00:00:00+02:00"
+  },
+  {
+    "Nev": "Chivas Regal 12",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 64,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-19T00:00:00+01:00"
+  },
+  {
+    "Nev": "Jameson Irish Whiskey",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 101,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-14T00:00:00+01:00"
+  },
+  {
+    "Nev": "Beefeater Gin",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 47,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-10-27T00:00:00+01:00"
+  },
+  {
+    "Nev": "Gordon's London Dry",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 83,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-11T00:00:00+01:00"
+  },
+  {
+    "Nev": "Campari",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 52,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-09-30T00:00:00+02:00"
+  },
+  {
+    "Nev": "Aperol",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 96,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-06T00:00:00+01:00"
+  },
+  {
+    "Nev": "Hennessy VS",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 34,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-10-21T00:00:00+01:00"
+  },
+  {
+    "Nev": "Metaxa 7*",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 58,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-03T00:00:00+01:00"
+  },
+  {
+    "Nev": "Chio Chips Paprika",
+    "Kategoria": "Egy\u00E9b",
+    "Mennyiseg": 84,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-20T00:00:00+01:00"
+  },
+  {
+    "Nev": "Lay's S\u00F3s Chips",
+    "Kategoria": "Egy\u00E9b",
+    "Mennyiseg": 132,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-15T00:00:00+01:00"
+  },
+  {
+    "Nev": "Pog\u00E1csa Mini Sajtos",
+    "Kategoria": "Egy\u00E9b",
+    "Mennyiseg": 57,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-10-28T00:00:00+01:00"
+  },
+  {
+    "Nev": "S\u00F3s P\u00E1lcika",
+    "Kategoria": "Egy\u00E9b",
+    "Mennyiseg": 199,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-23T00:00:00+01:00"
+  },
+  {
+    "Nev": "Nachos Kukorica Chips",
+    "Kategoria": "Egy\u00E9b",
+    "Mennyiseg": 76,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-12T00:00:00+01:00"
+  },
+  {
+    "Nev": "Tuc Cracker S\u00F3s",
+    "Kategoria": "Egy\u00E9b",
+    "Mennyiseg": 43,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-10-18T00:00:00+02:00"
+  },
+  {
+    "Nev": "Ropi Extra",
+    "Kategoria": "Egy\u00E9b",
+    "Mennyiseg": 168,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-08T00:00:00+01:00"
+  },
+  {
+    "Nev": "Sajtos Tall\u00E9r",
+    "Kategoria": "Egy\u00E9b",
+    "Mennyiseg": 29,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-09-30T00:00:00+02:00"
+  },
+  {
+    "Nev": "Pringles Original",
+    "Kategoria": "Egy\u00E9b",
+    "Mennyiseg": 61,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-17T00:00:00+01:00"
+  },
+  {
+    "Nev": "Popcorn S\u00F3s",
+    "Kategoria": "Egy\u00E9b",
+    "Mennyiseg": 140,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-19T00:00:00+01:00"
   }
+  
+ 
+
+
+
+
+
 
 
 
