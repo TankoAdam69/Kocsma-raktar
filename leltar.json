@@ -208,5 +208,59 @@
     "Mennyiseg": 65,
     "KeszletenVan": true,
     "UtolsoRendelesDatum": "2025-11-16T00:00:00+01:00"
+  },
+  {
+    "Nev": "Jim Beam",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 179,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-24T00:00:00+01:00"
+
+  },
+  {
+    "Nev": "Jack Daniel's",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 95,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-18T00:00:00+01:00"
+  },
+  {
+    "Nev": "Finlandia Vodka",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 120,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-10T00:00:00+01:00"
+  },
+  {
+    "Nev": "Baileys Original",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 42,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-10-29T00:00:00+01:00"
+  },
+  {
+    "Nev": "Unicum",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 63,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-05T00:00:00+01:00"
+  },
+  {
+    "Nev": "Unicum Szilva",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 67,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-11-05T00:00:00+01:00"
+  },
+  {
+    "Nev": "Johnnie Walker Red Label",
+    "Kategoria": "R\u00F6vidital",
+    "Mennyiseg": 88,
+    "KeszletenVan": false,
+    "UtolsoRendelesDatum": "2025-09-22T00:00:00+02:00"
   }
+
+
+
+
 ]
