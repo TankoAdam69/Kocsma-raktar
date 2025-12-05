@@ -46,6 +46,20 @@ namespace KocsmaLeltar
             }
         }
 
+        private bool _keszletenVan = true;
+        public bool KeszletenVan
+        {
+            get => _keszletenVan;
+            set
+            {
+                if (_keszletenVan != value)
+                {
+                    _keszletenVan = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
         private DateTime _utolsoRendelesDatum = DateTime.Today;
         public DateTime UtolsoRendelesDatum
         {

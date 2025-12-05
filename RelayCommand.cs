@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 namespace KocsmaLeltar
 {
-    // Ez köti össze a gombokat a ViewModelben lévő logikával.
+    // Ez köti össze a gombokat a ViewModelben lévő dolgokkal
     public class RelayCommand : ICommand
     {
         private readonly Action<object> _execute;

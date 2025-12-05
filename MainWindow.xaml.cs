@@ -10,5 +10,15 @@ namespace KocsmaLeltar
 
             DataContext = new MainViewModel();
         }
+
+        private void ListBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

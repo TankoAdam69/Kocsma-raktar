@@ -215,10 +215,9 @@
     "Mennyiseg": 179,
     "KeszletenVan": true,
     "UtolsoRendelesDatum": "2025-11-24T00:00:00+01:00"
-
   },
   {
-    "Nev": "Jack Daniel's",
+    "Nev": "Jack Daniel\u0027s",
     "Kategoria": "R\u00F6vidital",
     "Mennyiseg": 95,
     "KeszletenVan": true,
@@ -259,7 +258,6 @@
     "KeszletenVan": false,
     "UtolsoRendelesDatum": "2025-09-22T00:00:00+02:00"
   },
-
   {
     "Nev": "Jim Beam M\u00E9zes",
     "Kategoria": "R\u00F6vidital",
@@ -268,7 +266,7 @@
     "UtolsoRendelesDatum": "2025-11-24T00:00:00+01:00"
   },
   {
-    "Nev": "Jack Daniel's 20 years ",
+    "Nev": "Jack Daniel\u0027s 20 years ",
     "Kategoria": "R\u00F6vidital",
     "Mennyiseg": 95,
     "KeszletenVan": true,
@@ -331,7 +329,7 @@
     "UtolsoRendelesDatum": "2025-08-17T00:00:00+02:00"
   },
   {
-    "Nev": "Jägermeister",
+    "Nev": "J\u00E4germeister",
     "Kategoria": "R\u00F6vidital",
     "Mennyiseg": 112,
     "KeszletenVan": true,
@@ -380,7 +378,7 @@
     "UtolsoRendelesDatum": "2025-10-27T00:00:00+01:00"
   },
   {
-    "Nev": "Gordon's London Dry",
+    "Nev": "Gordon\u0027s London Dry",
     "Kategoria": "R\u00F6vidital",
     "Mennyiseg": 83,
     "KeszletenVan": true,
@@ -405,7 +403,7 @@
     "Kategoria": "R\u00F6vidital",
     "Mennyiseg": 34,
     "KeszletenVan": true,
-    "UtolsoRendelesDatum": "2025-10-21T00:00:00+01:00"
+    "UtolsoRendelesDatum": "2025-10-21T01:00:00+02:00"
   },
   {
     "Nev": "Metaxa 7*",
@@ -422,7 +420,7 @@
     "UtolsoRendelesDatum": "2025-11-20T00:00:00+01:00"
   },
   {
-    "Nev": "Lay's S\u00F3s Chips",
+    "Nev": "Lay\u0027s S\u00F3s Chips",
     "Kategoria": "Egy\u00E9b",
     "Mennyiseg": 132,
     "KeszletenVan": true,
@@ -483,16 +481,12 @@
     "Mennyiseg": 140,
     "KeszletenVan": true,
     "UtolsoRendelesDatum": "2025-11-19T00:00:00+01:00"
+  },
+  {
+    "Nev": "szar",
+    "Kategoria": "S\u00F6r",
+    "Mennyiseg": 30,
+    "KeszletenVan": true,
+    "UtolsoRendelesDatum": "2025-12-05T00:00:00+01:00"
   }
-  
- 
-
-
-
-
-
-
-
-
-
 ]
